@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'pantalla_principal.dart';
+import 'pantallas/pantalla_principal.dart';
 
 // ----------- DEBORAH MIZRAHI -----------
 // -------- PROYECTO DE NIVELACION --------
@@ -39,27 +39,27 @@ class Pantalla1 extends StatelessWidget {
     );
   }
 
-  appbar() {
-    return Scaffold(
-      body: Container(
-        //EFECTO DEL APPBAR
-        child: CustomScrollView(
-          slivers: [
-            SliverAppBar(
-              //NO LOGRE PONER LA FOTO MAS GRANDE
-              floating: true,
-              title: Center(
-                child: Image.asset(
-                  'assets/images/Logo.png',
-                  fit: BoxFit.scaleDown,
-                  height: 70,
-                ),
-              ),
-              backgroundColor: Colors.transparent,
-            ),
-          ],
-        ),
-      ),
-    );
-  }
+  // appbar() {
+  //   return Scaffold(
+  //     body: Container(
+  //       //EFECTO DEL APPBAR
+  //       child: CustomScrollView(
+  //         slivers: [
+  //           SliverAppBar(
+  //             //NO LOGRE PONER LA FOTO MAS GRANDE
+  //             floating: true,
+  //             title: Center(
+  //               child: Image.asset(
+  //                 'assets/images/Logo.png',
+  //                 fit: BoxFit.scaleDown,
+  //                 height: 70,
+  //               ),
+  //             ),
+  //             backgroundColor: Colors.transparent,
+  //           ),
+  //         ],
+  //       ),
+  //     ),
+  //   );
+  // }
 }

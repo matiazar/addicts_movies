@@ -1,6 +1,5 @@
-import 'package:addicts_movies/main.dart';
+import 'package:addicts_movies/pantallas/populares.dart';
 import 'package:flutter/material.dart';
-import 'segunda_pantalla.dart';
 
 //DEBORAH MIZRAHI
 //COSAS QUE ARREGLAR:
@@ -17,6 +16,7 @@ class _PantallaPrincipalState extends State<PantallaPrincipal> {
     return Scaffold(
       body: Container(
         decoration: BoxDecoration(
+          //degrade de colores en el background
           gradient: LinearGradient(
             colors: [
               Colors.grey[900],
@@ -93,7 +93,7 @@ class _PantallaPrincipalState extends State<PantallaPrincipal> {
           onTap: () {
             Navigator.of(context).push(
               MaterialPageRoute(
-                builder: (context) => Pantalla1(),
+                builder: (context) => Populares(),
               ),
             );
           },
