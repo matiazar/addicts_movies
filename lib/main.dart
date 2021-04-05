@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'pantallas/pantalla_principal.dart';
 
-// ----------- DEBORAH MIZRAHI -----------
 // -------- PROYECTO DE NIVELACION --------
-//------------ ADDICTS MOVIES ------------
 
 void main() {
   runApp(MyApp());
