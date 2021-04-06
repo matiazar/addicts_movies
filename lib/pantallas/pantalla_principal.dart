@@ -1,8 +1,6 @@
 import 'package:addicts_movies/mantenimiento.dart';
-import 'package:addicts_movies/pantallas/populares.dart';
 import 'package:flutter/material.dart';
 
-//DEBORAH MIZRAHI
 //COSAS QUE ARREGLAR:
 // 1. QUE HULU SEA MAS PEQUENIO Y NETFLIX MAS GRANDE...
 
@@ -27,6 +25,7 @@ class _PantallaPrincipalState extends State<PantallaPrincipal> {
             end: const FractionalOffset(1.0, 0.9),
           ),
         ),
+
         //EFECTO DEL APPBAR
         child: CustomScrollView(
           slivers: [
@@ -36,16 +35,9 @@ class _PantallaPrincipalState extends State<PantallaPrincipal> {
               title: Center(
                 child: Image.asset(
                   'assets/images/Logo.png',
-                  //fit: BoxFit.scaleDown,
                   height: 70,
                 ),
               ),
-              // expandedHeight: 200,
-              // flexibleSpace: Image.asset(
-              //   'assets/images/Logo.png',
-              //   fit: BoxFit.cover,
-              //   height: 70,
-              // ),
               backgroundColor: Colors.transparent,
             ),
 
@@ -80,9 +72,6 @@ class _PantallaPrincipalState extends State<PantallaPrincipal> {
           ],
         ),
       ),
-      //ya esta el degradado
-      //backgroundColor: Colors.black,
-
       bottomNavigationBar: BottomNavigationBar(
         items: [
           //No logro poner mas de 3 items en el taskbar...
