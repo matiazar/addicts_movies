@@ -37,29 +37,4 @@ class Pantalla1 extends StatelessWidget {
       ),
     );
   }
-
-//appbar igaul que el de la pantalla principal
-  // appbar() {
-  //   return Scaffold(
-  //     body: Container(
-  //       //EFECTO DEL APPBAR
-  //       child: CustomScrollView(
-  //         slivers: [
-  //           SliverAppBar(
-  //             //NO LOGRE PONER LA FOTO MAS GRANDE
-  //             floating: true,
-  //             title: Center(
-  //               child: Image.asset(
-  //                 'assets/images/Logo.png',
-  //                 fit: BoxFit.scaleDown,
-  //                 height: 70,
-  //               ),
-  //             ),
-  //             backgroundColor: Colors.transparent,
-  //           ),
-  //         ],
-  //       ),
-  //     ),
-  //   );
-  // }
 }

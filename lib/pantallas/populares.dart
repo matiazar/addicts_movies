@@ -35,6 +35,7 @@ class Populares extends StatelessWidget {
     );
   }
 
+//no puedo poner esto en el appbar...
   appbar() {
     return Scaffold(
       body: Container(
