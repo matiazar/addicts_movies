@@ -6,8 +6,11 @@ import 'package:addicts_movies/clases/clase_Populares.dart';
 class Populares extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Padding(
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Hola'),
+      ),
+      body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16),
         child: FutureBuilder<List<C_Populares>>(
           future: obtenerPopulares(),

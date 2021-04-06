@@ -17,6 +17,7 @@ class MyApp extends StatelessWidget {
   }
 }
 
+//simple prueba de cambio de pantalla
 class Pantalla1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -37,6 +38,7 @@ class Pantalla1 extends StatelessWidget {
     );
   }
 
+//appbar igaul que el de la pantalla principal
   // appbar() {
   //   return Scaffold(
   //     body: Container(
