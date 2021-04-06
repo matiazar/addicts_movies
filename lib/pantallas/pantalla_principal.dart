@@ -1,3 +1,4 @@
+import 'package:addicts_movies/mantenimiento.dart';
 import 'package:addicts_movies/pantallas/populares.dart';
 import 'package:flutter/material.dart';
 
@@ -62,9 +63,9 @@ class _PantallaPrincipalState extends State<PantallaPrincipal> {
                       ),
 
                       //METODOS PARA CREAR LAS IMAGENES
-                      plataformas('assets/images/DisneyPlus.jpg'),
-                      SizedBox(height: 20),
                       plataformas('assets/images/Netflix1.jpg'),
+                      SizedBox(height: 20),
+                      plataformas('assets/images/DisneyPlus.jpg'),
                       SizedBox(height: 20),
                       plataformas('assets/images/PrimeVideo.png'),
                       SizedBox(height: 20),
@@ -79,7 +80,17 @@ class _PantallaPrincipalState extends State<PantallaPrincipal> {
           ],
         ),
       ),
-      // backgroundColor: Colors.black,
+      //ya esta el degradado
+      //backgroundColor: Colors.black,
+
+      bottomNavigationBar: BottomNavigationBar(
+        items: [
+          //No logro poner mas de 3 items en el taskbar...
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+          BottomNavigationBarItem(icon: Icon(Icons.search), label: 'Search'),
+          BottomNavigationBarItem(icon: Icon(Icons.person), label: 'User'),
+        ],
+      ),
     );
   }
 
@@ -93,7 +104,7 @@ class _PantallaPrincipalState extends State<PantallaPrincipal> {
           onTap: () {
             Navigator.of(context).push(
               MaterialPageRoute(
-                builder: (context) => Populares(),
+                builder: (context) => Mantenimiento(),
               ),
             );
           },
