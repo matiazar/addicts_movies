@@ -37,6 +37,8 @@ class PeliculaDetalle extends StatelessWidget {
                       imageW: snapshot.data[index].image,
                       descriptionW: snapshot.data[index].description,
                     ),
+                    //SOLO ME MUESTRA UNA PORQUE NO PUSE .lenght
+                    // SI NO QUE PUSE index_pantallas = 1
                     itemCount: index_pantallas,
                   ),
                 ),
