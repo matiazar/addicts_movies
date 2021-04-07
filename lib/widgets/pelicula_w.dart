@@ -1,8 +1,6 @@
 import 'package:addicts_movies/pages/pelicula_detalle.dart';
 import 'package:flutter/material.dart';
 
-import '../mantenimiento.dart';
-
 class PeliculaWidget extends StatelessWidget {
   const PeliculaWidget({
     Key key,
@@ -33,7 +31,11 @@ class PeliculaWidget extends StatelessWidget {
             onTap: () {
               Navigator.of(context).push(
                 MaterialPageRoute(
-                  builder: (context) => PeliculaDetalle(),
+                  builder: (context) => PeliculaDetalle(
+                    image: imageW,
+                    title: titleW,
+                    description: descriptionW,
+                  ),
                 ),
               );
             },
@@ -44,7 +46,7 @@ class PeliculaWidget extends StatelessWidget {
         Text(
           descriptionW,
           style: TextStyle(
-            fontSize: 10,
+            fontSize: 20,
           ),
         )
       ],
