@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:addicts_movies/clases/clase_Populares.dart';
+import 'package:addicts_movies/classes/clase_Populares.dart';
 
 Future<List<C_Populares>> obtenerPopulares() async {
   try {

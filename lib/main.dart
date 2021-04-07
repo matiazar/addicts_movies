@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'pantallas/pantalla_principal.dart';
+import 'pages/pantalla_principal.dart';
+import 'widgets/pantalla_principal_w.dart';
 
 // -------- PROYECTO DE NIVELACION --------
 

@@ -1,7 +1,7 @@
-import 'package:addicts_movies/widgets/widget_pelicula.dart';
+import 'package:addicts_movies/widgets/pelicula_w.dart';
 import 'package:flutter/material.dart';
-import 'package:addicts_movies/clases/clase_MasVistas.dart';
-import 'package:addicts_movies/servicios/masVistas_servicio.dart';
+import 'package:addicts_movies/classes/clase_MasVistas.dart';
+import 'package:addicts_movies/service/masVistas_servicio.dart';
 
 class MasVistas extends StatelessWidget {
   @override

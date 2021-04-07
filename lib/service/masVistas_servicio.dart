@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:addicts_movies/clases/clase_MasVistas.dart';
+import 'package:addicts_movies/classes/clase_MasVistas.dart';
 
 Future<List<C_MasVistas>> obtenerMasVistas() async {
   try {
