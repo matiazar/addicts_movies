@@ -1,3 +1,4 @@
+import 'package:addicts_movies/pruebas.dart';
 import 'package:flutter/material.dart';
 import 'pages/pantalla_principal.dart';
 import 'widgets/pantalla_principal_w.dart';

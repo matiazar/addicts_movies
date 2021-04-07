@@ -11,6 +11,7 @@ class _PantallaPrincipalState extends State<PantallaPrincipal_W> {
   @override
   Widget build(BuildContext context) {
     return Container(
+      //color: Colors.grey[900],
       decoration: BoxDecoration(
         //degrade de colores en el background
         gradient: LinearGradient(
@@ -18,8 +19,8 @@ class _PantallaPrincipalState extends State<PantallaPrincipal_W> {
             Colors.grey[900],
             Colors.black,
           ],
-          begin: const FractionalOffset(1.0, 0.2),
-          end: const FractionalOffset(1.0, 0.9),
+          begin: const FractionalOffset(1, 0.1),
+          end: const FractionalOffset(1.0, 1.0),
         ),
       ),
 

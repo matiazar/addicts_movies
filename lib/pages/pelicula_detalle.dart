@@ -11,43 +11,45 @@ class PeliculaDetalle extends StatelessWidget {
   final String image;
   final String description;
 
-  int index_pantallas = 1;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Pelicula detalles'),
-      ),
-      // body:obtenerPopulares[index_pantallas],
       body: Center(
-        child: FutureBuilder<List<C_Populares>>(
-          future: obtenerPopulares(),
-          builder: (context, snapshot) => snapshot.data == null
-              ? snapshot.hasError
-                  ? Center(child: Text('Error'))
-                  : Center(
-                      child: CircularProgressIndicator(),
-                    )
-              : Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: ListView.builder(
-                    itemBuilder: (context, index) => PeliculaWidget(
-                      titleW: snapshot.data[index].title,
-                      imageW: snapshot.data[index].image,
-                      descriptionW: snapshot.data[index].description,
-                    ),
-                    //SOLO ME MUESTRA UNA PORQUE NO PUSE .lenght
-                    // SI NO QUE PUSE index_pantallas = 1
-                    itemCount: index_pantallas,
+        child: CustomScrollView(
+          slivers: [
+            SliverAppBar(
+              //NO LOGRE PONER LA FOTO MAS GRANDE
+
+              backgroundColor: Colors.grey[800],
+            ),
+
+            //LA LISTA DE FOTOS + LA FUNCION DEL APPBAR
+            SliverList(
+              delegate: SliverChildListDelegate(
+                [
+                  Column(
+                    //NO FUNCIONAN  LOS AXIS...??
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      SizedBox(
+                        height: 20,
+                      ),
+
+                      //METODOS PARA CREAR LAS IMAGENES
+                      PeliculaWidget(
+                        titleW: title,
+                        imageW: image,
+                        descriptionW: description,
+                      ),
+                    ],
                   ),
-                ),
+                ],
+              ),
+            ),
+          ],
         ),
       ),
     );
-  }
-
-  num(int num) {
-    return num;
   }
 }

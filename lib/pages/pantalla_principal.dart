@@ -23,42 +23,40 @@ class _PantallaPrincipalState extends State<PantallaPrincipal> {
   ];
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        body: pantallas[index_pantallas],
-        //No puedo hacer que salga el nombre en todos al principio
-        bottomNavigationBar: BottomNavigationBar(
-          backgroundColor: Colors.black,
-          items: [
-            //No logro poner mas de 3 items en el taskbar...
-            BottomNavigationBarItem(
-              icon: Icon(Icons.home),
-              label: 'Home',
-              backgroundColor: Colors.black,
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.search),
-              label: 'Search',
-              backgroundColor: Colors.black,
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.movie_creation_outlined),
-              label: 'Movies',
-              backgroundColor: Colors.black,
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.person_pin),
-              label: 'You',
-              backgroundColor: Colors.black,
-            ),
-          ],
-          onTap: (index) {
-            setState(() {
-              index_pantallas = index;
-            });
-          },
-          currentIndex: index_pantallas,
-        ),
+    return Scaffold(
+      body: pantallas[index_pantallas],
+      //No puedo hacer que salga el nombre en todos al principio
+      bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: Colors.black,
+        items: [
+          //No logro poner mas de 3 items en el taskbar...
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Home',
+            backgroundColor: Colors.black,
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.search),
+            label: 'Search',
+            backgroundColor: Colors.black,
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.movie_creation_outlined),
+            label: 'Movies',
+            backgroundColor: Colors.black,
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person_pin),
+            label: 'You',
+            backgroundColor: Colors.black,
+          ),
+        ],
+        onTap: (index) {
+          setState(() {
+            index_pantallas = index;
+          });
+        },
+        currentIndex: index_pantallas,
       ),
     );
   }

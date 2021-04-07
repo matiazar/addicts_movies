@@ -6,7 +6,7 @@ class Mantenimiento extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Lo Sentimos'),
+        title: Text('mantenimiento'),
       ),
       body: Center(
         child: Column(
