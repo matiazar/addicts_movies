@@ -1,7 +1,6 @@
-import 'package:addicts_movies/pruebas.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'pages/pantalla_principal.dart';
-import 'widgets/pantalla_principal_w.dart';
 
 // -------- PROYECTO DE NIVELACION --------
 
@@ -18,6 +17,23 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+//provider
+// class MyApp extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return MultiProvider(
+//       providers: [],
+//       child: MaterialApp(
+//         debugShowCheckedModeBanner: false,
+//         initialRoute: 'Home',
+//         routes: {
+//           'Home': (BuildContext context) => PantallaPrincipal(),
+//         },
+//       ),
+//     );
+//   }
+// }
 
 //simple prueba de cambio de pantalla
 class Pantalla1 extends StatelessWidget {

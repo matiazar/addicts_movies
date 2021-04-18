@@ -67,7 +67,7 @@ class PantallaSearch extends SearchDelegate<SearchMovie> {
           title: Text(pelicula.original_title),
           subtitle: Text(pelicula.release_date),
           onTap: () {
-            this.close(context, PeliculaDetalle());
+            this.close(context, pelicula);
           },
         );
       },

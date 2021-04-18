@@ -26,7 +26,7 @@ class Populares extends StatelessWidget {
                     itemBuilder: (context, index) => PeliculaWidget(
                       titleW: snapshot.data[index].title,
                       imageW: snapshot.data[index].image,
-                      descriptionW: snapshot.data[index].description,
+                      // descriptionW: snapshot.data[index].description,
                     ),
                     itemCount: snapshot.data.length,
                   ),
