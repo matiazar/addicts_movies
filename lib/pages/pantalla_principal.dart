@@ -26,7 +26,8 @@ class _PantallaPrincipalState extends State<PantallaPrincipal> {
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.search),
+        backgroundColor: Colors.black,
+        child: Icon(Icons.search, color: Colors.white),
         onPressed: () {
           showSearch(
             context: context,
