@@ -1,5 +1,3 @@
-import 'package:addicts_movies/classes/clase_Populares.dart';
-import 'package:addicts_movies/service/populares_servicio.dart';
 import 'package:addicts_movies/widgets/pelicula_w.dart';
 import 'package:flutter/material.dart';
 

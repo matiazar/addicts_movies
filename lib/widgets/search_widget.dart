@@ -1,5 +1,4 @@
 import 'package:addicts_movies/classes/search_movies.dart';
-import 'package:addicts_movies/pages/pelicula_detalle.dart';
 import 'package:addicts_movies/service/search_service.dart';
 import 'package:flutter/material.dart';
 
