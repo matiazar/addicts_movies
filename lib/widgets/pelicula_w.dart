@@ -22,7 +22,7 @@ class PeliculaWidget extends StatelessWidget {
         Text(
           titleW,
           style: TextStyle(
-            fontSize: 30,
+            fontSize: 20,
           ),
         ),
         ClipRRect(
@@ -40,7 +40,9 @@ class PeliculaWidget extends StatelessWidget {
               );
             },
             child: Image.network(
-                'https://www.themoviedb.org/t/p/w600_and_h900_bestv2' + imageW),
+              'https://www.themoviedb.org/t/p/w600_and_h900_bestv2' + imageW,
+              height: 300,
+            ),
           ),
         ),
         Text(

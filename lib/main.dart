@@ -1,3 +1,5 @@
+import 'package:addicts_movies/service/masVistas_servicio.dart';
+import 'package:addicts_movies/service/populares_servicio.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'pages/pantalla_principal.dart';
@@ -8,32 +10,29 @@ void main() {
   runApp(MyApp());
 }
 
+//provider
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: PantallaPrincipal(),
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(
+          create: (context) => PopularesProvider(),
+        ),
+        ChangeNotifierProvider(
+          create: (context) => MasVistasProvider(),
+        ),
+      ],
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        initialRoute: 'Home',
+        routes: {
+          'Home': (BuildContext context) => PantallaPrincipal(),
+        },
+      ),
     );
   }
 }
-
-//provider
-// class MyApp extends StatelessWidget {
-//   @override
-//   Widget build(BuildContext context) {
-//     return MultiProvider(
-//       providers: [],
-//       child: MaterialApp(
-//         debugShowCheckedModeBanner: false,
-//         initialRoute: 'Home',
-//         routes: {
-//           'Home': (BuildContext context) => PantallaPrincipal(),
-//         },
-//       ),
-//     );
-//   }
-// }
 
 //simple prueba de cambio de pantalla
 class Pantalla1 extends StatelessWidget {

@@ -1,4 +1,5 @@
 import 'package:addicts_movies/mantenimiento.dart';
+import 'package:addicts_movies/pages/masVistas.dart';
 import 'package:addicts_movies/pages/populares.dart';
 import 'package:addicts_movies/widgets/pantalla_principal_w.dart';
 import 'package:addicts_movies/widgets/search_widget.dart';
@@ -18,24 +19,13 @@ class _PantallaPrincipalState extends State<PantallaPrincipal> {
   int index_pantallas = 0;
   List<Widget> pantallas = [
     PantallaPrincipal_W(),
-    Populares(),
+    MasVistas(),
     Container(),
     Mantenimiento(),
   ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton: FloatingActionButton(
-        backgroundColor: Colors.black,
-        child: Icon(Icons.search, color: Colors.white),
-        onPressed: () {
-          showSearch(
-            context: context,
-            delegate: PantallaSearch(),
-          );
-        },
-      ),
-
       body: pantallas[index_pantallas],
       //No puedo hacer que salga el nombre en todos al principio
       bottomNavigationBar: BottomNavigationBar(
@@ -55,8 +45,8 @@ class _PantallaPrincipalState extends State<PantallaPrincipal> {
             backgroundColor: Colors.black,
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.star_border),
-            label: 'Favorite',
+            icon: Icon(Icons.search),
+            label: 'Search',
             backgroundColor: Colors.black,
           ),
           BottomNavigationBarItem(
@@ -66,12 +56,12 @@ class _PantallaPrincipalState extends State<PantallaPrincipal> {
           ),
         ],
         onTap: (index) {
-          // if (index == 2) {
-          //   return showSearch(
-          //     context: context,
-          //     delegate: PantallaSearch(),
-          //   );
-          // }
+          if (index == 2) {
+            return showSearch(
+              context: context,
+              delegate: PantallaSearch(),
+            );
+          }
           setState(
             () {
               index_pantallas = index;
