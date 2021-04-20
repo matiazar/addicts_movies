@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        initialRoute: 'Home',
+        initialRoute: 'PantallaPrincipal',
         routes: {
           'Home': (BuildContext context) => PantallaPrincipal(),
           'PantallaPrincipal': (BuildContext context) => PantallaPrincipal_W(),

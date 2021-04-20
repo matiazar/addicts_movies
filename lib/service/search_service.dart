@@ -12,6 +12,8 @@ class SearchService {
           .map((peliculaJson) => SearchMovie.fromJson(peliculaJson))
           .toList();
 
+      // print(listadoPeliculas);
+      // return listadoPeliculas;
       return List<SearchMovie>.from(listadoPeliculas);
     } catch (e) {
       return [];

@@ -22,6 +22,9 @@ class PantallaSearch extends SearchDelegate<SearchMovie> {
   }
 
   @override
+  Widget buildResults2(BuildContext context) {}
+
+  @override
   Widget buildResults(BuildContext context) {
     if (query.trim().length == 0) {
       print('no hay valor en el query');
@@ -30,7 +33,7 @@ class PantallaSearch extends SearchDelegate<SearchMovie> {
     final searchService = new SearchService();
     return FutureBuilder(
       future: searchService.getPelicula(query),
-      builder: (_, AsyncSnapshot snapshot) {
+      builder: (_, AsyncSnapshot<List<SearchMovie>> snapshot) {
         if (snapshot.hasData) {
           return _showMovies(snapshot.data);
         } else {
