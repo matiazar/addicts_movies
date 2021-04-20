@@ -1,7 +1,10 @@
+import 'package:addicts_movies/pages/masVistas.dart';
 import 'package:addicts_movies/service/masVistas_servicio.dart';
 import 'package:addicts_movies/service/populares_servicio.dart';
+import 'package:addicts_movies/widgets/pantalla_principal_w.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'mantenimiento.dart';
 import 'pages/pantalla_principal.dart';
 
 // -------- PROYECTO DE NIVELACION --------
@@ -28,6 +31,9 @@ class MyApp extends StatelessWidget {
         initialRoute: 'Home',
         routes: {
           'Home': (BuildContext context) => PantallaPrincipal(),
+          'PantallaPrincipal': (BuildContext context) => PantallaPrincipal_W(),
+          'Mantenimiento': (BuildContext context) => Mantenimiento(),
+          'MasVistas': (BuildContext context) => MasVistas(),
         },
       ),
     );
