@@ -1,4 +1,3 @@
-import 'package:addicts_movies/widgets/bottomnavigation.dart';
 import 'package:flutter/material.dart';
 
 //llego desde la pantalla principal apretando alguna plataforma
@@ -7,10 +6,8 @@ class Mantenimiento extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        automaticallyImplyLeading: false,
         title: Text('mantenimiento'),
       ),
-      bottomNavigationBar: BottomNavigation(),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

@@ -1,7 +1,6 @@
 import 'package:addicts_movies/mantenimiento.dart';
 import 'package:addicts_movies/pages/masVistas.dart';
 import 'package:addicts_movies/pages/populares.dart';
-import 'package:addicts_movies/widgets/bottomnavigation.dart';
 import 'package:addicts_movies/widgets/pantalla_principal_w.dart';
 import 'package:addicts_movies/widgets/search_widget.dart';
 import 'package:flutter/material.dart';
@@ -18,19 +17,59 @@ class PantallaPrincipal extends StatefulWidget {
 
 class _PantallaPrincipalState extends State<PantallaPrincipal> {
   int index_pantallas = 0;
-  // List<Widget> pantallas = [
-  //   PantallaPrincipal_W(),
-  //   MasVistas(),
-  //   Container(),
-  //   Mantenimiento(),
-  // ];
-
+  List<Widget> pantallas = [
+    PantallaPrincipal_W(),
+    MasVistas(),
+    Container(),
+    Mantenimiento(),
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // body: pantallas[index_pantallas],
+      body: pantallas[index_pantallas],
       //No puedo hacer que salga el nombre en todos al principio
-      bottomNavigationBar: BottomNavigation(),
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: index_pantallas,
+        backgroundColor: Colors.black,
+        items: [
+          //No logro poner mas de 3 items en el taskbar...
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Home',
+            backgroundColor: Colors.black,
+          ),
+
+          BottomNavigationBarItem(
+            icon: Icon(Icons.movie_creation_outlined),
+            label: 'Movies',
+            backgroundColor: Colors.black,
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.search),
+            label: 'Search',
+            backgroundColor: Colors.black,
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person_pin),
+            label: 'You',
+            backgroundColor: Colors.black,
+          ),
+        ],
+        onTap: (index) {
+          if (index == 2) {
+            return showSearch(
+              context: context,
+              delegate: PantallaSearch(),
+            );
+          }
+          setState(
+            () {
+              index_pantallas = index;
+              print(index_pantallas);
+            },
+          );
+        },
+      ),
     );
   }
 }
